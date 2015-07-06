@@ -1,0 +1,44 @@
+doctype html
+html(lang='en', ng-app='Test03')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Test03
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='stylesheets/03.css')
+    link(rel='shortcut icon', href='/favicon.ico')
+  body(ng-controller='Test03Ctrl')
+    table.text-center
+      thead
+        tr
+          th.text-left Feature/Engine
+          th FF1
+          th FF2
+          th IE1
+          th IE2
+          th IE3
+          th WK1
+          th WK2
+          th WK3
+          th WK4
+          th iOS1
+          th iOS2
+      tbody
+        tr.row(ng-repeat='feature in data')
+          td.feature.text-left {{feature.name}}
+          td.FF1(class='{{getClass(feature.FF1)}}') {{feature.FF1}}
+          td.FF2(class='{{getClass(feature.FF2)}}') {{feature.FF2}}
+          td.IE1(class='{{getClass(feature.IE1)}}') {{feature.IE1}}
+          td.IE2(class='{{getClass(feature.IE2)}}') {{feature.IE2}}
+          td.IE3(class='{{getClass(feature.IE3)}}') {{feature.IE3}}
+          td.WK1(class='{{getClass(feature.WK1)}}') {{feature.WK1}}
+          td.WK2(class='{{getClass(feature.WK2)}}') {{feature.WK2}}
+          td.WK3(class='{{getClass(feature.WK3)}}') {{feature.WK3}}
+          td.WK4(class='{{getClass(feature.WK4)}}') {{feature.WK4}}
+          td.iOS1(class='{{getClass(feature.iOS1)}}') {{feature.iOS1}}
+          td.iOS2(class='{{getClass(feature.iOS2)}}') {{feature.iOS2}}
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js')
+    script(src='javascripts/03.js')

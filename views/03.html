@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Test03">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test03</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="03.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body ng-controller="Test03Ctrl">
+  <table class="text-center">
+    <thead>
+      <tr>
+        <th class="text-left">Feature/Engine</th>
+        <th>FF1</th>
+        <th>FF2</th>
+        <th>IE1</th>
+        <th>IE2</th>
+        <th>IE3</th>
+        <th>WK1</th>
+        <th>WK2</th>
+        <th>WK3</th>
+        <th>WK4</th>
+        <th>iOS1</th>
+        <th>iOS2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row" ng-repeat="feature in data">
+        <td class="feature text-left">{{feature.name}}</td>
+        <td class="FF1 {{getClass(feature.FF1)}}">{{feature.FF1}}</td>
+        <td class="FF2 {{getClass(feature.FF2)}}">{{feature.FF2}}</td>
+        <td class="IE1 {{getClass(feature.IE1)}}">{{feature.IE1}}</td>
+        <td class="IE2 {{getClass(feature.IE2)}}">{{feature.IE2}}</td>
+        <td class="IE3 {{getClass(feature.IE3)}}">{{feature.IE3}}</td>
+        <td class="WK1 {{getClass(feature.WK1)}}">{{feature.WK1}}</td>
+        <td class="WK2 {{getClass(feature.WK2)}}">{{feature.WK2}}</td>
+        <td class="WK3 {{getClass(feature.WK3)}}">{{feature.WK3}}</td>
+        <td class="WK4 {{getClass(feature.WK4)}}">{{feature.WK4}}</td>
+        <td class="iOS1 {{getClass(feature.iOS1)}}">{{feature.iOS1}}</td>
+        <td class="iOS2 {{getClass(feature.iOS2)}}">{{feature.iOS2}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+  <script src="03.js"></script>
+</body>
+</html>
